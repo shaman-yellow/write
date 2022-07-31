@@ -3,7 +3,7 @@ read_story <-
            filepath = .wsave,
            ...
            ){
-    path <- list.files(filepath, pattern = "(.*).md$", full.names = T)
+    path <- list.files(filepath, pattern = "ch(.*).md$", full.names = T)
     system(paste0("cp ", paste(path, collapse = " "), " -t ", filepath, "/backup"))
     list <- pbapply::pblapply(path, base_read_ch,
                               pretty = T)

@@ -1,6 +1,6 @@
 initialize_writing <-
   function(
-           story = "rise", 
+           story = "love_story", 
            path = paste0(.wstory, "/", story)
            ){
     cat("load story", story, "\n")
