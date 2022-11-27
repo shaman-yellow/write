@@ -1,7 +1,7 @@
 load_into <-
   function(
            list,
-           exclude = c("outline", "scenes", "annotation")
+           exclude = .exclude_annotation
            ){
     df <- data.table::rbindlist(list, idcol = T, fill = T) %>%
       dplyr::rename(z_from = .id) %>%
